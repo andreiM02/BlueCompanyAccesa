@@ -32,18 +32,25 @@ namespace BlueCompanyGamification
             using (OleDbConnection connection = new OleDbConnection(connectionString))
             {
                 connection.Open();
-                OleDbCommand command = new OleDbCommand("SELECT points FROM tbl_users WHERE workerid=@workerId", connection);
+                OleDbCommand command = new OleDbCommand("SELECT points,score,nume,prenume FROM tbl_users WHERE workerid=@workerId", connection);
                 command.Parameters.AddWithValue("@workerId", workerId);
 
-                object result = command.ExecuteScalar();
-                if (result != null && result != DBNull.Value)
+                //object result = command.ExecuteScalar();
+                OleDbDataReader reader = command.ExecuteReader();
+                if (reader.Read())
                 {
-                    int points = Convert.ToInt32(result);
-                    label4.Text = "Puncte: " + points.ToString();
+                    int points = Convert.ToInt32(reader["points"]);
+                    int score = Convert.ToInt32(reader["score"]);
+
+                    label4.Text = points.ToString();
+                    label6.Text = score.ToString();
+                    label7.Text = workerId.ToString();
                 }
                 else
                 {
-                    label4.Text = "Puncte: 0";
+                    label4.Text = "0";
+                    label6.Text = "0";
+                    label7.Text = "salut";
                 }
             }
         }

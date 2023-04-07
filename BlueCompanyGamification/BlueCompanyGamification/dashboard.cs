@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -32,9 +34,31 @@ namespace BlueCompanyGamification
 
         private void dashboard_Load_1(object sender, EventArgs e) // Load Function
         {
-            label1.Text = "Worker ID: " + workerId;
+            string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=db_users.mdb";
+
+            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            {
+                connection.Open();
+                OleDbCommand command = new OleDbCommand("SELECT points,score,nume,prenume FROM tbl_users WHERE workerid=@workerId", connection);
+                command.Parameters.AddWithValue("@workerId", workerId);
+
+                //object result = command.ExecuteScalar();
+                OleDbDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    string nume = reader["nume"].ToString();
+                    string prenume = reader["prenume"].ToString();
+
+                    string numecap = char.ToUpper(nume[0]) + nume.Substring(1);                   // capitalize first letter if its written in lowercase from the nume
+                    string prenumecap = char.ToUpper(prenume[0]) + prenume.Substring(1);         // capitalize first letter if its written in lowercase from the prenume
+                    label1.Text = numecap.ToString() + " " + prenumecap.ToString();
+                }
+                else
+                {
+                    label1.Text = "salut";
+                }
+            }
             dash dash = new dash(workerId);
-            //dash dash = new dash();
 
             dash.TopLevel= false;
             dash.FormBorderStyle= FormBorderStyle.None;

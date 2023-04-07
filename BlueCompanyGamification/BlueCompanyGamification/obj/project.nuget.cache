@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "x2wpeN0sCHrXU/ynK82mUI2kWEI47JaTHn9nIAMqcc0bAt8WHk8NBfTo5jpHIFXaE6ZxrxeSF3Iu4+TtZfynhA==",
+  "dgSpecHash": "MIW1p6pY1KHP2YuNA14O75h6mcePhGVWzk7ZyNO9cqaO9UoFbdlvMmV4f0BmM89KNtjqfxNmlU1FRCWCGmcgIw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Andrei\\source\\repos\\BlueCompanyGamification\\BlueCompanyGamification\\BlueCompanyGamification.csproj",
+  "projectFilePath": "C:\\Users\\Andrei\\Documents\\GitHub\\BlueCompanyAccesa\\BlueCompanyGamification\\BlueCompanyGamification\\BlueCompanyGamification.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Andrei\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
     "C:\\Users\\Andrei\\.nuget\\packages\\system.configuration.configurationmanager\\7.0.0\\system.configuration.configurationmanager.7.0.0.nupkg.sha512",
