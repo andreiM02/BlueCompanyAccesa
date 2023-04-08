@@ -72,3 +72,5 @@ C:\Users\Andrei\Documents\GitHub\BlueCompanyAccesa\BlueCompanyGamification\BlueC
 C:\Users\Andrei\Documents\GitHub\BlueCompanyAccesa\BlueCompanyGamification\BlueCompanyGamification\obj\Debug\net6.0-windows\BlueCompanyGamification.pdb
 C:\Users\Andrei\Documents\GitHub\BlueCompanyAccesa\BlueCompanyGamification\BlueCompanyGamification\obj\Debug\net6.0-windows\BlueCompanyGamification.genruntimeconfig.cache
 C:\Users\Andrei\Documents\GitHub\BlueCompanyAccesa\BlueCompanyGamification\BlueCompanyGamification\obj\Debug\net6.0-windows\ref\BlueCompanyGamification.dll
+C:\Users\Andrei\Documents\GitHub\BlueCompanyAccesa\BlueCompanyGamification\BlueCompanyGamification\obj\Debug\net6.0-windows\BlueCompanyGamification.leaderboard.resources
+C:\Users\Andrei\Documents\GitHub\BlueCompanyAccesa\BlueCompanyGamification\BlueCompanyGamification\obj\Debug\net6.0-windows\BlueCompanyGamification.admin.resources

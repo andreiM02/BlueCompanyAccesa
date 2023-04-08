@@ -58,7 +58,18 @@ namespace BlueCompanyGamification
                     label1.Text = "salut";
                 }
             }
+
+            if (Int32.TryParse(workerId, out int workeridInt) && workeridInt == 10)  // adminul are acces la o pagina noua de unde poate inregistra oameni noi veniti in compania
+            {
+                button5.Visible = true;
+            }
+            else
+            {
+                button5.Visible = false;
+            }
+
             dash dash = new dash(workerId);
+            //leaderboard = leader = new leaderboard(workerId);
 
             dash.TopLevel= false;
             dash.FormBorderStyle= FormBorderStyle.None;
@@ -67,6 +78,8 @@ namespace BlueCompanyGamification
             panel1.Controls.Add(dash);
 
             dash.Show();
+
+            label2.Text = "\u00A9 BlueCompany";
         }
 
         private void button4_Click(object sender, EventArgs e) // Exit Button
@@ -107,5 +120,20 @@ namespace BlueCompanyGamification
             panel1.Controls.Add(dash);
             dash.Show();
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            leaderboard leader = new leaderboard();
+
+            leader.TopLevel = false;
+            leader.FormBorderStyle= FormBorderStyle.None;
+            panel1.Controls.Clear();
+            panel1.Controls.Add(leader);
+            leader.Show();
+        }
+
+     
+
+        
     }
 }
