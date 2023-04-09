@@ -78,7 +78,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(172, 19);
             this.label1.TabIndex = 12;
-            this.label1.Text = "WorkerId";
+            this.label1.Text = "WorkerId:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
@@ -112,7 +112,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(172, 19);
             this.label3.TabIndex = 14;
-            this.label3.Text = "Points";
+            this.label3.Text = "Points:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel3
@@ -146,7 +146,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(175, 19);
             this.label2.TabIndex = 13;
-            this.label2.Text = "Score";
+            this.label2.Text = "Score:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel4
@@ -176,14 +176,14 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(612, 19);
             this.label5.TabIndex = 14;
-            this.label5.Text = "Badges";
+            this.label5.Text = "Badges:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(729, 439);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
