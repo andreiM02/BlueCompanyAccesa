@@ -132,8 +132,15 @@ namespace BlueCompanyGamification
             leader.Show();
         }
 
-     
+        private void button5_Click(object sender, EventArgs e)
+        {
+            admin adminn= new admin();
 
-        
+            adminn.TopLevel = false;
+            adminn.FormBorderStyle= FormBorderStyle.None;
+            panel1.Controls.Clear();
+            panel1.Controls.Add(adminn);
+            adminn.Show();
+        }
     }
 }

@@ -67,13 +67,13 @@ namespace BlueCompanyGamification
             }
             else
             {
-                textBox2.PasswordChar = '*';
+                textBox2.PasswordChar = '•';
             }
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            textBox2.PasswordChar = '*';
+            textBox2.PasswordChar = '•';
             
         }
 
