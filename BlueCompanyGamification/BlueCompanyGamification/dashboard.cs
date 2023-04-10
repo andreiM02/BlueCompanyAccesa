@@ -99,7 +99,7 @@ namespace BlueCompanyGamification
 
         private void button1_Click(object sender, EventArgs e) // Quests Button
         {
-            quests quest = new quests();
+            quests quest = new quests(workerId);
 
             quest.TopLevel = false;
             quest.FormBorderStyle= FormBorderStyle.None;
