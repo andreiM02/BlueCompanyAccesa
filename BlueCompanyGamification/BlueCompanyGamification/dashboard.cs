@@ -145,7 +145,7 @@ namespace BlueCompanyGamification
 
         private void button2_Click(object sender, EventArgs e)
         {
-            badges badge = new badges();
+            badges badge = new badges(workerId);
 
             badge.TopLevel = false;
             badge.FormBorderStyle= FormBorderStyle.None;

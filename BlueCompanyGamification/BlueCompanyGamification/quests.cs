@@ -54,7 +54,7 @@ namespace BlueCompanyGamification
                         lbl.Text = $"Posted by: WorkerId{reader.GetString(2)} on {reader.GetDateTime(3).ToShortDateString()} \nProblem: {reader.GetString(0)}";
                         lbl.Dock = DockStyle.Top;
                         lbl.Size = new Size(667, 36);
-                        lbl.BackColor = Color.FromArgb(100, 120, 174);
+                        lbl.BackColor = Color.FromArgb(61, 150, 144);
                         lbl.Font = new Font("MS Reference Sans Serif",9.5f,FontStyle.Bold) ;
                         lbl.ForeColor = Color.White;
                         
@@ -86,20 +86,22 @@ namespace BlueCompanyGamification
                         panel1.Controls.Add(rtb);
                         panel1.Controls.Add(lbl);
 
-                        SetButtonState(btn, completedBy, completed);
+                        SetButtonState(btn, btn1, completedBy, completed);
                     }
 
-                    void SetButtonState(Button btn, string completedBy, bool completed)
+                    void SetButtonState(Button btn,Button btn1, string completedBy, bool completed)
                     {
                         if (completed)
                         {
                             btn.Enabled = false;
                             btn.Text = "Completed by WorkerId: " + completedBy;
+                            btn1.Enabled = false;
                         }
                         else
                         {
                             btn.Enabled = true;
                             btn.Text = "Complete Quest";
+                            btn1.Enabled = true;
                         }
                     }
 
@@ -123,6 +125,7 @@ namespace BlueCompanyGamification
                     void Btn_Click(object sender, EventArgs e)
                     {
                         Button btn = sender as Button;
+                        Button btn1 = sender as Button;
                         string rtbText = btn.Tag.ToString();
                         RichTextBox rtb = btn.Tag as RichTextBox;
                         string questname = btn.Tag.ToString();
@@ -137,14 +140,14 @@ namespace BlueCompanyGamification
                                 command.Parameters.AddWithValue("@questcode", originaltext);
                                 command.Parameters.AddWithValue("@completedby", completedBy);
                                 command.Parameters.AddWithValue("@questname", questname);
-                            int rowsAffected = command.ExecuteNonQuery();
+                                int rowsAffected = command.ExecuteNonQuery();
 
                                 // check if the update was successful
                                 if (rowsAffected > 0)
                                 {
 
                                     MessageBox.Show("Quest completed and your account got 500 Points and 500 Score");
-                                    SetButtonState(btn, completedBy, true);
+                                    SetButtonState(btn, btn1, completedBy, true);
                                     string updateUser = "UPDATE tbl_users SET points = points + 500, score = score + 500 WHERE workerid=@workerId";
                                     OleDbCommand command1 = new OleDbCommand(updateUser, connection);
                                     command1.Parameters.AddWithValue("@workerId",workerId);
@@ -162,6 +165,11 @@ namespace BlueCompanyGamification
                     }
                 }
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
