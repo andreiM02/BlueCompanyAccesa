@@ -42,9 +42,14 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.button10 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -66,9 +71,9 @@
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(4, 189);
+            this.button3.Location = new System.Drawing.Point(7, 145);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(177, 41);
+            this.button3.Size = new System.Drawing.Size(177, 31);
             this.button3.TabIndex = 6;
             this.button3.Text = "DASHBOARD";
             this.button3.UseVisualStyleBackColor = false;
@@ -84,9 +89,9 @@
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(4, 227);
+            this.button1.Location = new System.Drawing.Point(7, 219);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(177, 41);
+            this.button1.Size = new System.Drawing.Size(177, 31);
             this.button1.TabIndex = 7;
             this.button1.Text = "QUESTS";
             this.button1.UseVisualStyleBackColor = false;
@@ -102,12 +107,13 @@
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(4, 265);
+            this.button2.Location = new System.Drawing.Point(4, 256);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(177, 41);
+            this.button2.Size = new System.Drawing.Size(177, 31);
             this.button2.TabIndex = 8;
             this.button2.Text = "BADGES";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button4
             // 
@@ -119,9 +125,9 @@
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(4, 359);
+            this.button4.Location = new System.Drawing.Point(4, 330);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(177, 41);
+            this.button4.Size = new System.Drawing.Size(177, 31);
             this.button4.TabIndex = 9;
             this.button4.Text = "EXIT";
             this.button4.UseVisualStyleBackColor = false;
@@ -224,9 +230,9 @@
             this.button9.ForeColor = System.Drawing.Color.White;
             this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
             this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.Location = new System.Drawing.Point(4, 312);
+            this.button9.Location = new System.Drawing.Point(4, 293);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(177, 41);
+            this.button9.Size = new System.Drawing.Size(177, 31);
             this.button9.TabIndex = 14;
             this.button9.Text = "LEADERBOARD";
             this.button9.UseVisualStyleBackColor = false;
@@ -242,24 +248,68 @@
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(4, 145);
+            this.button5.Location = new System.Drawing.Point(4, 367);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(177, 41);
+            this.button5.Size = new System.Drawing.Size(177, 31);
             this.button5.TabIndex = 15;
             this.button5.Text = "ADMIN";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.panel5.Location = new System.Drawing.Point(-6, 121);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(11, 356);
+            this.panel5.TabIndex = 19;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.panel3.Location = new System.Drawing.Point(181, 136);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(10, 365);
+            this.panel3.TabIndex = 20;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Location = new System.Drawing.Point(4, 426);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(177, 63);
+            this.panel4.TabIndex = 21;
+            // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(4, 432);
+            this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(3, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(177, 36);
+            this.label2.Size = new System.Drawing.Size(174, 21);
             this.label2.TabIndex = 17;
+            this.label2.Text = "label2";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.Transparent;
+            this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button10.ForeColor = System.Drawing.Color.White;
+            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
+            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button10.Location = new System.Drawing.Point(7, 182);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(177, 31);
+            this.button10.TabIndex = 22;
+            this.button10.Text = "NEW QUEST";
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // dashboard
             // 
@@ -267,15 +317,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(120)))), ((int)(((byte)(174)))));
             this.ClientSize = new System.Drawing.Size(912, 468);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button10);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -283,6 +336,7 @@
             this.Load += new System.EventHandler(this.dashboard_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -302,6 +356,10 @@
         private Button button6;
         private Button button9;
         private Button button5;
+        private Panel panel5;
+        private Panel panel3;
+        private Panel panel4;
         private Label label2;
+        private Button button10;
     }
 }

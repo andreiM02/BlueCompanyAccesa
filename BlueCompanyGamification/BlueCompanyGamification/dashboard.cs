@@ -142,5 +142,32 @@ namespace BlueCompanyGamification
             panel1.Controls.Add(adminn);
             adminn.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            badges badge = new badges();
+
+            badge.TopLevel = false;
+            badge.FormBorderStyle= FormBorderStyle.None;
+            panel1.Controls.Clear();
+            panel1.Controls.Add(badge);
+            badge.Show();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            newquest newquestt = new newquest(workerId);
+
+            newquestt.TopLevel = false;
+            newquestt.FormBorderStyle= FormBorderStyle.None;
+            panel1.Controls.Clear();
+            panel1.Controls.Add(newquestt);
+            newquestt.Show();
+        }
     }
 }

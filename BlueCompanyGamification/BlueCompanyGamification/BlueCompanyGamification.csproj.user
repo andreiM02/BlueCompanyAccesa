@@ -19,6 +19,9 @@
     <Compile Update="leaderboard.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="newquest.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="quests.cs">
       <SubType>Form</SubType>
     </Compile>
