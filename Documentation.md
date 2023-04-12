@@ -6,7 +6,7 @@ posting the problem code in the new quest page. So there is a posibility for the
 The good part of this application is that the user can earn a lot of points by resolving the quests from their colleagues , and be a high place in the
 leaderboard , or just for buying a badge that can provide users with lot of benefits.
 
-You can find how this app works on this link:
+You can find how this app works on this link:https://youtu.be/FPYCXGNp3KA
 
 The informations of the users are stored in a local database made with acces.
 
