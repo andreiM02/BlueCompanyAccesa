@@ -35,14 +35,13 @@ namespace BlueCompanyGamification
                 OleDbCommand command = new OleDbCommand("SELECT points,score,badge1,badge2,badge3,badge4,nume,prenume FROM tbl_users WHERE workerid=@workerId", connection);
                 command.Parameters.AddWithValue("@workerId", workerId);
 
-                //object result = command.ExecuteScalar();
                 OleDbDataReader reader = command.ExecuteReader();
                 if (reader.Read())
                 {
                     int points = Convert.ToInt32(reader["points"]);
                     int score = Convert.ToInt32(reader["score"]);
                     int badge1 = Convert.ToInt32(reader["badge1"]);
-                    int badge2 = Convert.ToInt32(reader["badge2"]);
+                    int badge2 = Convert.ToInt32(reader["badge2"]);          //the variables from the database are saved.
                     int badge3 = Convert.ToInt32(reader["badge3"]);
                     int badge4 = Convert.ToInt32(reader["badge4"]);
 
@@ -62,8 +61,8 @@ namespace BlueCompanyGamification
                     }
                     if (badge2 == 0)
                     {
-                        pictureBox2.Visible = true;
-                        pictureBox5.Visible = false;
+                        pictureBox2.Visible = true;                         // this is the badge system for showing the image with the corect badge
+                        pictureBox5.Visible = false;                        // if badge1 == 0  , then the badge is off , and if badge1 == 1, the badge is dispalyed
                     }
                     else
                     {
@@ -100,6 +99,7 @@ namespace BlueCompanyGamification
                 }
 
             }
+            // here is the quests posted by the saved workerId saved from Login.
             using (OleDbConnection connection = new OleDbConnection(connectionString))
             {
                 connection.Open();
@@ -135,9 +135,6 @@ namespace BlueCompanyGamification
             }
         }
 
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
     }
 }

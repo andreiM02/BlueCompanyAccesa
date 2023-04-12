@@ -59,7 +59,7 @@ namespace BlueCompanyGamification
                 }
             }
 
-            if (Int32.TryParse(workerId, out int workeridInt) && workeridInt == 10)  // adminul are acces la o pagina noua de unde poate inregistra oameni noi veniti in compania
+            if (Int32.TryParse(workerId, out int workeridInt) && workeridInt == 1)  // adminul are acces la o pagina noua de unde poate inregistra oameni noi veniti in compania
             {
                 button5.Visible = true;
             }
@@ -121,7 +121,7 @@ namespace BlueCompanyGamification
             dash.Show();
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void button9_Click(object sender, EventArgs e) // Leaderboard Button
         {
             leaderboard leader = new leaderboard();
 
@@ -132,7 +132,7 @@ namespace BlueCompanyGamification
             leader.Show();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e) // Admin  Button
         {
             admin adminn= new admin();
 
@@ -143,7 +143,7 @@ namespace BlueCompanyGamification
             adminn.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e) // Badge Button
         {
             badges badge = new badges(workerId);
 
@@ -159,7 +159,7 @@ namespace BlueCompanyGamification
 
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private void button10_Click(object sender, EventArgs e) // New Quest Button
         {
             newquest newquestt = new newquest(workerId);
 

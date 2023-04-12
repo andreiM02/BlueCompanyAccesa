@@ -20,9 +20,7 @@ namespace BlueCompanyGamification
         {
             InitializeComponent();
             workerId = workerIdFromDashboard;
-            //string workerid = workerId;
         }
-        //string workerid = workerId;
 
         private void button5_Click(object sender, EventArgs e)
         {
