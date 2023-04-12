@@ -1,2 +1,0 @@
-# BlueCompanyAccesa
- InternshipAccesa
